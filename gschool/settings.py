@@ -12,9 +12,12 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+django_heroku.settings(locals())
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-czrs4ax#yj((7we)^mvgs5y8bv6u3*(f(1c2#%_yx7o(5c8=-!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://gschool.herokuapp.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
