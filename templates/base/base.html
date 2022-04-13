@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+
+  .headcon {
+    width: 100%;
+  }
+
+  .logo {
+    font-family: "Sofia", sans-serif;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .g {
+    color:DodgerBlue;
+  }
+  .dash {
+    color:Gray;
+  }
+  .sc {
+    color:Orange;"
+  }
+  .ho {
+    background-color:DodgerBlue;
+    color: white;
+  }
+  .ol {
+    color:MediumSeaGreen;
+  }
+
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+  {% block style %}
+  {% endblock %}
+  </style>
+  </head>
+  <body>
+    <div class="headcon">
+      <p class="logo"><span class="g">G</span><span class="dash">-</span><span class="sc">Sc</span><span class="ho">ho</span><span class="ol">ol</span></p>
+    </div>
+    <div class="sidebar">
+      {% block navbar %}
+      {% endblock %}
+    </div>
+
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>
