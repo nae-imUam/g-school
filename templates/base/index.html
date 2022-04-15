@@ -4,18 +4,23 @@
   body {font-family: Arial, Helvetica, sans-serif;}
 
   /* Set a style for all buttons */
-  a {
+  .condiv{
+    background-color: white;
+  }
+  .contdiv a {
+    float: left;
     background-color: #04AA6D;
     text-decoration: none;
+    text-align: center;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 8px 5px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 120px;
   }
 
-  a:hover {
+  .contdiv a:hover {
     opacity: 0.8;
   }
 {% endblock %}
@@ -26,16 +31,17 @@
   <a href="#about">About</a>
 {% endblock %}
 {% block content %}
+<h1>Hello...{{ user.first_name }}</h1>
 
-<h2>gSchool Login Form</h2>
 
+<div class="contdiv">
 
-<a href="login">Login</a>
-<a href="signup">Signup</a>
-<a href="#">SchoolApp</a>
-<a href="#">ClassApp</a>
-<a href="#">TeacherApp</a>
-<a href="#">StudentApp</a>
-<a href="#">AttendenceApp</a>
+  <a href="#">SchoolApp</a>
+  <a href="#">ClassApp</a>
+  <a href="#">TeacherApp</a>
+  <a href="#">StudentApp</a>
+  <a href="#">AttendenceApp</a>
+</div>
+
 
 {% endblock %}
