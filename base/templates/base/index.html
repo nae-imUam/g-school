@@ -1,0 +1,55 @@
+{%  extends "base/base.html" %}
+
+{% block style %}
+  body {font-family: Arial, Helvetica, sans-serif;}
+
+  /* Set a style for all buttons */
+  .condiv{
+    background-color: white;
+  }
+  .contdiv a {
+    float: left;
+    background-color: #04AA6D;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 5px;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+  }
+
+  .contdiv a:hover {
+    opacity: 0.8;
+  }
+{% endblock %}
+{% block navbar %}
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+{% endblock %}
+{% block content %}
+<h1>Hello, {{ user.first_name }}. Welcome to GSchool. </h1>
+<a href="update_profile">Update Profile</a>
+
+
+<div class="contdiv">
+
+  <a href="#">SchoolApp</a>
+  <a href="#">ClassApp</a>
+  <a href="#">TeacherApp</a>
+  <a href="#">StudentApp</a>
+  <a href="#">AttendenceApp</a>
+</div>
+
+<footer>
+  <div class="contdiv">
+    <a href="logout" style="background-color:red">Logout</a>
+  </div>
+</footer>
+
+
+
+{% endblock %}
