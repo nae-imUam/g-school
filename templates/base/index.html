@@ -31,7 +31,8 @@
   <a href="#about">About</a>
 {% endblock %}
 {% block content %}
-<h1>Hello...{{ user.first_name }}</h1>
+<h1>Hello, {{ user.first_name }}. Welcome to GSchool. </h1>
+<a href="update_profile">Update Profile</a>
 
 
 <div class="contdiv">
@@ -42,6 +43,13 @@
   <a href="#">StudentApp</a>
   <a href="#">AttendenceApp</a>
 </div>
+
+<footer>
+  <div class="contdiv">
+    <a href="logout" style="background-color:red">Logout</a>
+  </div>
+</footer>
+
 
 
 {% endblock %}

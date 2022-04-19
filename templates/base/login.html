@@ -145,7 +145,7 @@
   <a href="#about">About</a>
 {% endblock %}
 {% block content %}
-<div class="modal">
+<div class="modal" id="id01">
 
   <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
@@ -167,7 +167,6 @@
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <a class="cancelbtn" href="/">Cancel</a>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
@@ -184,6 +183,7 @@ window.onclick = function(event) {
 }
 </script>
 <h2>If you have no account.</h2>
-<a href="Signup">Login</a>
+<a href="signup">Signup</a>
+<a href="login">Login</a>
 
 {% endblock %}

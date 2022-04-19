@@ -31,9 +31,9 @@ class School(models.Model):
     def __str__(self):
         return f"{self.schoolName} ({self.udiseCode})"
 
+
 class Teacher(models.Model):
-    tid = models.IntegerField()
-    uid = models.IntegerField(default = 0)
+    mob = models.IntegerField(default = 0)
     name= models.CharField(max_length=50)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, null=True)
     school = models.ForeignKey(School, on_delete=models.CASCADE, related_name="jobat", null=True)
@@ -41,12 +41,12 @@ class Teacher(models.Model):
 
 
     def __str__(self):
-        return f"{self.name} ({self.uid})"
+        return f"{self.name} ({self.mob})"
 
 
 
 class Student(models.Model):
-    sid = models.IntegerField()
+    mob = models.IntegerField()
     name = models.CharField(max_length=50)
     Class = models.ForeignKey(Class, on_delete=models.CASCADE)
     rollno = models.IntegerField()
@@ -54,3 +54,11 @@ class Student(models.Model):
 
     def __str__(self):
         return f"{self.name}, class: {self.Class}, Roll No.: {self.rollno}"
+
+class OtherStaff(models.Model):
+    mob = models.IntegerField()
+    name = models.CharField(max_length=50)
+    job = models.CharField(max_length=15)
+
+    def __str__(self):
+        return f"{self.name}({self.job})"
